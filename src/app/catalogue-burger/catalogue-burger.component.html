@@ -1,0 +1,28 @@
+
+<div class="face-snap-card">
+
+    <h1>{{ catalogueburgers.titles}}</h1>
+        
+    <p class="image">
+    <img [src] =catalogueburgers.imageUrl [alt]=catalogueburgers.titles>
+    </p>
+    <p class="desc">{{ catalogueburgers.description}}</p>
+    <div class="voirs">
+     <p class="prix "> {{ catalogueburgers.prix  |  currency :' fcfa'}}</p>
+   
+     <button class="details" routerLink="panier" >Ajouter Au panier</button>
+    </div>
+    <div class="ajouter">
+       <button class="" routerLink="details_burger">  VOIR DETAILS </button>
+    </div>
+</div>
+
+<!--
+</div> 
+ <h4>List des Burgers</h4>
+<app-catalogue-list-burger *ngFor="let burger of burgers"  [produit]="burger"></app-catalogue-list-burger>
+<hr>
+<h4>List des Menus</h4>
+<app-catalogue-list-burger *ngFor="let menu of menus" [produit]="menu"></app-catalogue-list-burger> 
+-->
+

@@ -1,0 +1,29 @@
+
+<div class="  ">
+    <hr>
+    <h5 class="">NOS BURGERS</h5>
+    <hr>
+    <div class="row">
+
+        <app-burger *ngFor="let burger of burgers " class="col col-sm-4" [burger] = "burger">
+        </app-burger>
+    </div>
+    <h5 class="">NOS BURGERS</h5>
+    <div class="row">
+
+        <app-menu *ngFor="let menu of menus " class="col col-sm-4" [menu] = "menu">
+        </app-menu>
+    </div>
+   
+</div>
+
+<!--
+<ul>
+    <li>{{produit}}</li>
+</ul>
+-->
+<!--
+<div>
+    <app-catalogue-burger *ngFor=" let catalogueburger of catalogueburgers" [catalogueburgers] = "catalogueburger"></app-catalogue-burger>
+</div>
+-->

@@ -1,0 +1,19 @@
+
+<div class="border border-3">
+       
+            <img src="/assets/images/images.jpeg" alt="">
+            <h2 class="fs-2">{{ burger.nomProduit}}</h2>
+            <div class="d-flex">
+                <p class="prix "> {{ burger.prix }}</p>
+            <p class="desc">{{ burger.description}}</p>
+             </div>
+            
+            <div class="d-flex">
+                <button class="btn-primary">  VOIR DETAILS </button>
+                <button class="details" routerLink="details_burger" (click)="addToCart(burger)">Ajouter Au panier</button>
+            </div>
+          
+</div>
+
+
+

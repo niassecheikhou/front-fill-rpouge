@@ -1,0 +1,28 @@
+<header>
+  <h1>BIENVENU A BRAZIL BURGER</h1>
+  <a
+    [routerLink]="['panier']">
+    <i class="bi bi-cart4"style="font-size:2em ;color : white">{{(items$ |
+      async)?.length}}</i>
+    </a>
+  
+    <a
+     [routerLink]="['burgers']">
+    <i class="fa-solid fa-bars" style="font-size:2em ;color : white"></i>
+    </a>
+</header>
+
+<!--
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+    
+      </div>
+    </div>
+  </div> 
+  -->
