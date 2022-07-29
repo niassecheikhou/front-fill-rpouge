@@ -5,5 +5,5 @@ export class IBurger{
         nomProduit!: string;
         description!: string;
         prix!: number;
-       
+        qantiteCommander!: number;    
 }

@@ -10,15 +10,28 @@ import { PanierService } from '../services/panier.service';
 })
 export class PanierComponent implements OnInit {
  
+  somm:number =0;
+  qty=1;
+
   
-  
+  items$: Observable<IBurger[]>=this.panierService.items$;
   constructor(private panierService:PanierService) {
   }
+  
   ngOnInit(): void {
+    this.items$.subscribe(value=>{
+      value.forEach(item=>{
+        this.somm += +item.prix;
+      })
+    });
     
   }
   
-  items$?: Observable<IBurger[]>=this.panierService.items$;
+
+  removeFromPanier(panier:IBurger){
+    this.panierService.addToCartAndRemove(panier,'out')
+  }
+
   // this.cartItems = this.panierService.getItemFormCart();
 
   // constructor(private panier: PanierService) { 

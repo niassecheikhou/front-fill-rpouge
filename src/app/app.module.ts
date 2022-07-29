@@ -16,6 +16,7 @@ import { ProduitComponent } from './produit/produit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PanierComponent } from './panier/panier.component';
 import { MenuComponent } from './menu/menu.component';
+import { CartPanierComponent } from './cart-panier/cart-panier.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MenuComponent } from './menu/menu.component';
     ProduitComponent,
     BurgerComponent,
     PanierComponent,
-    MenuComponent
+    MenuComponent,
+    CartPanierComponent
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,7 @@ export class BurgerComponent implements OnInit {
   }
 
   addToCart(burger:any){
-    this.panierService.addToCart(this.burger);
+    this.panierService.addToCartAndRemove(this.burger);
   }
 
 }
