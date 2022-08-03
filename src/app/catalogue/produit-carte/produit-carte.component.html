@@ -1,0 +1,42 @@
+<div class="face-snap-card">
+
+    <h1>{{ produit.nomProduit}}</h1>
+
+    <p class="image">
+        <img [src]=produit.image [alt]=produit.nomProduit>
+    </p>
+    <p class="desc">{{ produit.description}}</p>
+    <div class="voirs">
+        <p class="prix "> {{ produit.prix|currency:"XOF" }}</p>
+
+        <button class="details" routerLink="panier" *ngIf="!isMenu(produit)">Ajouter Au panier</button>
+    </div>
+    <div class="ajouter">
+        <button class="" routerLink="details_burger">VOIR DETAILS </button>
+    </div>
+</div>
+
+<!--
+<div class="border border-3">
+
+    <img [src]="convertImgon(menu.image)" alt="">
+
+    <h2 class="fs-2">{{ .menuBurgers |json}}</h2>
+
+    <div class="d-flex">
+
+        <p class="prix"> {{ menu.menuTailleBoissons}}</p>
+        <p class="prix"> {{ menu.description }}</p>
+        <p class="prix"> {{ menu.prix}}</p>
+        <p class="desc">{{ menu.nomProduit}}</p>
+    </div>
+
+    <div class="d-flex">
+        <button class="btn-primary" [routerLink]="['/detail_menu',menu.id]">VOIR
+            DETAILS
+        </button>
+        <button class="details" routerLink="details_burger">Ajouter Au panier</button>
+    </div>
+
+</div>
+-->

@@ -1,7 +1,7 @@
 
 <div class="border border-3">
        
-            <img src="/assets/images/images.jpeg" alt="">
+            <img [src]="convertImg(burger.image)" alt="">
             <h2 class="fs-2">{{ burger.nomProduit}}</h2>
             <div class="d-flex">
                 <p class="prix "> {{ burger.prix }}</p>

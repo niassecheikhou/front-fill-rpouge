@@ -1,7 +1,7 @@
 export class IBurger{
         id!: number
         categorie!: string;
-        photo!: string;
+        image!: string;
         nomProduit!: string;
         description!: string;
         prix!: number;

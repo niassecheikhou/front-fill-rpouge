@@ -1,0 +1,37 @@
+<div class="div-toto" >
+
+    <div class="menu-des" *ngFor=" let menu of menus" > 
+
+        <div class="div-rigth" >
+            <h5 class="">{{menu.nomProduit}}</h5>
+            <p class="">{{menu.description}}</p>
+          </div>
+
+        <div class="div-centre" >
+            <img src="assets/images/berger-king.jpg">
+        </div>
+
+        <div class="div-left" >
+            <p >Voulez-vous Commander: C'est ici</p>
+            <button class="btn btn-danger" >Commander</button>
+        </div>
+
+    </div>
+
+    <div class="boisson-fritte" >
+
+        <div class="boisson" >
+        <app-boisson ></app-boisson>
+        </div>  
+
+        <div class="frite" >
+        <app-fritte ></app-fritte>
+        </div>
+
+    </div >
+    
+    <div class="zone-livraison">
+       <app-zone></app-zone>
+    </div>
+
+</div>
