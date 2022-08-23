@@ -21,6 +21,13 @@ import { FritteComponent } from './detail-menu/fritte/fritte.component';
 import { ZoneComponent } from './detail-menu/zone/zone.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { ProduitCarteComponent } from './catalogue/produit-carte/produit-carte.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
+import { ListeCommandeComponent } from './liste-commande/liste-commande.component';
+import { AdminModule } from './admin/admin.module';
+import { CommndeComponent } from './commnde/commnde.component';
+import { ClientModule } from './client/client.module';
+
 
 @NgModule({
   declarations: [
@@ -40,11 +47,18 @@ import { ProduitCarteComponent } from './catalogue/produit-carte/produit-carte.c
     ZoneComponent,
     CatalogueComponent,
     ProduitCarteComponent,
+    ListeCommandeComponent,
+    CommndeComponent,
+    
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    Ng2SearchPipeModule,
+    AdminModule,
+    ClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

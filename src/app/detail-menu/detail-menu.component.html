@@ -1,37 +1,121 @@
-<div class="div-toto" >
 
-    <div class="menu-des" *ngFor=" let menu of menus" > 
 
-        <div class="div-rigth" >
-            <h5 class="">{{menu.nomProduit}}</h5>
-            <p class="">{{menu.description}}</p>
-          </div>
 
-        <div class="div-centre" >
-            <img src="assets/images/berger-king.jpg">
-        </div>
-
-        <div class="div-left" >
-            <p >Voulez-vous Commander: C'est ici</p>
-            <button class="btn btn-danger" >Commander</button>
+<div class="div-toto">
+    <!--partie menu-->
+    <div class="menu-des">
+        <div class="div-rigth">
+            <div>
+            <h5 class=""> {{menuObs?.nomProduit}}</h5>
+            <p class=""> Prix {{menuObs?.prix}}</p>
+            <img class="image-menu"[src]="convertImg(menuObs.image)">
+             </div>
+            <div class="div-left">
+                <p>Voulez-vous Commander: C'est ici</p>
+                <button class="btn btn-danger">Panier</button>
+            </div>
         </div>
 
     </div>
 
-    <div class="boisson-fritte" >
+    <!--les complements-->
+    <div class="lesdetails">
+        <!--partie burger-->
+        <div class="burger">
 
-        <div class="boisson" >
-        <app-boisson ></app-boisson>
-        </div>  
+                <div class="card-body">
+                    <div>
+                        <h5 class="title"></h5>
+                        <h5 class="title"> Prix </h5>
+                        <img src="/assets/images/burger-king.jpg" class="card-img">
 
-        <div class="frite" >
-        <app-fritte ></app-fritte>
+                    </div>
+                    <div class=""><!--col-md-3 col-lg-3 col-xl-2 d-flex-->
+                        <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                        </button>
+
+                        <input id="form1" min="0" name="quantity" value="1"
+                            type="number"
+                            class="form-control form-control-sm" />
+
+                        <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+           
+        </div>
+        <!--boisson-->
+        <div class="d-flex">
+        <div class="boisson" *ngFor=" let mesboisson of elBoissons">
+
+
+            <div class="card">
+
+                <h5 class="title">{{mesboisson.nomProduit}}</h5>
+                <h5 class="title"> {{ mesboisson.prix}}</h5>
+                <p class="card-text">{{mesboisson.description}}</p>
+                <img src="/assets/images/boisson.jpeg" class="card-img">
+
+
+                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                    <button class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        <i class="fas fa-minus"></i>
+                    </button>
+
+                    <input id="form1" min="0" name="quantity" value="1"
+                        type="number"
+                        class="form-control form-control-sm" />
+
+                    <button class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <!--pour les frittes-->
+        <div class="fritte">
+
+            <div class="fritte-toto">
+                <div class="card-body">
+                    <div>
+                        <h5 class="title">nom fritte</h5>
+                        <h5 class="title">prix</h5>
+                        <p class="card-text">description</p>
+                        <img [src]="" class="card-img">
+
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                        <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                        </button>
+
+                        <input id="form1" min="0" name="quantity" value="1"
+                            type="number"
+                            class="form-control form-control-sm" />
+
+                        <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </div >
-    
-    <div class="zone-livraison">
-       <app-zone></app-zone>
     </div>
-
 </div>
+
+<!--<div>
+                <button type="btn" class="btn btn-primary btn-xs">-</button>
+                   <input type="number" class="">
+                <button type="btn" class="btn btn-primary btn-xs">+</button>
+               </div> -->

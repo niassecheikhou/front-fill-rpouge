@@ -1,16 +1,20 @@
 <div class="  ">
+   <div class="input-group w-25">
+      <input  [(ngModel)]= "searchText" id="search-input" type="search" name="search" id="form1" class="form-control w-25" />
+      <button id="search-button" type="button" class="btn btn-primary bg-warning">Search</button>
+    </div>
     <hr>
     <h5 class="">NOS BURGERS</h5>
     <hr>
     <div class="row">
 
-        <app-produit-carte *ngFor="let burger of burgers " class="col col-sm-4" [produit] = "burger">
+        <app-produit-carte *ngFor="let burger of burgers |filter:searchText" class="col col-sm-4" [produit] = "burger">
         </app-produit-carte>
     </div>
     <h5 class="">NOS MENUS</h5>
     <div class="row">
 
-        <app-produit-carte *ngFor="let menu of menus " class="col col-sm-4" [produit] = "menu">
+        <app-produit-carte *ngFor="let menu of menus |filter:searchText" class="col col-sm-4" [produit] = "menu">
         </app-produit-carte>
     </div>
    

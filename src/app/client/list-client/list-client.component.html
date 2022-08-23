@@ -1,0 +1,30 @@
+<!--
+<h1 class="text-center">LISTE DES CLIENTS</h1>
+<table class="table">
+  <thead class="bg-dark " >
+  <tr class="text-white ">
+    <th scope class="text-center py-3">N°</th>
+    <th scope class="text-center">PRENOM & NOM</th>
+    <th scope class="text-center py-3">ADRESSE CLIENT</th>
+    <th scope class="text-center py-3">TELEPHONE</th>
+    <th scope class="text-center py-3">ACTION</th>
+
+  </tr>
+</thead>
+
+<tbody class ="tbody">
+    
+  <tr class="elements" *ngFor="let client of mesclients;let i = index " >
+    <td  class="text-center">{{(i+1)}}</td>
+    <td  class="text-center">{{client.nomComplet}}</td>
+    <td  class="text-center">{{client.adresse}}</td>
+    <td  class="text-center">{{client.telephone}}</td>
+    
+    <td  class="text-center">
+        <button type="button" class="btn btn-warning  mx-3"(click)="detaileCommandeClient(client)">VOIR MES COMMANDES</button>
+     </td>
+</tr>
+ 
+</tbody>
+</table>
+-->

@@ -5,8 +5,8 @@ export class ICatalogue{
     id!: number;
     menus!: IMenu[];
     burgers!: IBurger[];
-    description!: string;
-    imageUrl!: string;  
+    description!: string; 
     prix!: number;
+    qantiteCommander!: number;
    
 }

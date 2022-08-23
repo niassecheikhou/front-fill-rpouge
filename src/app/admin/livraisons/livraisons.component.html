@@ -1,0 +1,30 @@
+
+<h1 class="text-center">liste des livraisons</h1>
+<table class="table">
+  <thead class="bg-dark " >
+  <tr class="text-white ">
+
+    <th scope class="text-center py-3">NUMERO COMMANDE</th>
+    <th scope class="text-center py-3">ADRESSE CLIENT</th>
+    <th scope class="text-center py-3">TELEPHONE CLIENT</th>
+    <th scope class="text-center py-3">QUANTITES</th>
+    <th scope class="text-center py-3">MONTANT</th>
+  </tr>
+</thead>
+
+<tbody class ="tbody">
+  <tr class="elements" *ngFor="let livraison of meslivraison">
+    <td  class="text-center">{{livraison.numeroCommande}}</td>
+    <td  class="text-center">{{livraison.client.adresse}}</td>
+    <td  class="text-center">{{livraison.client.telephone}}</td>
+    
+    <td class="elements" *ngFor="let product of livraison.Produits">
+       <p>{{product.qantiteCommander}}</p> 
+    </td>
+    <td class="elements" *ngFor="let product of livraison.Produits"> 
+        <p>{{product. montantPayer}}</p> 
+     </td>
+</tr>
+
+</tbody>
+</table>

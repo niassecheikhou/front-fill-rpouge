@@ -1,0 +1,30 @@
+<h1 class="text-center">liste des commandes</h1>
+<table class="table">
+  <thead class="bg-dark " >
+  <tr class="text-white ">
+    <th scope class="text-center py-3">N°</th>
+    <th scope class="text-center py-3">NUMERO COMMANDE</th>
+    <th scope class="text-center py-3">Prix</th>
+    <th scope class="text-center">DATE COMMANDE</th>
+    <th scope class="text-center py-3">CLIENT</th>
+    <th scope class="text-center py-3">ACTION</th>
+  </tr>
+</thead>
+
+<tbody class ="tbody">
+  <tr class="elements" *ngFor="let tabCommandes of tabCommande;let i = index ">
+    <td  class="text-center">{{(i+1)}}</td>
+    <td  class="text-center">{{tabCommandes.numeroCommande}}</td>
+    <td  class="text-center">{{tabCommandes.prixTotal}}</td>
+    <td  class="text-center">{{tabCommandes.createAt | date:'h:mm:ss'}}</td>
+    <td  class="text-center">{{tabCommandes.client.telephone}}</td>
+    <td  class="text-center">
+        <button type="button" class="btn btn-success mx-3">Edit</button>
+        <button type="button" class="btn btn-warning  mx-3" (click)="detaileCommande(tabCommandes)">Details</button>
+     </td>
+</tr>
+  <!--
+    <app-commnde *ngFor="let tabCommandes of tabCommande" [tabComm] = 'tabCommandes' ></app-commnde>
+-->
+</tbody>
+</table>

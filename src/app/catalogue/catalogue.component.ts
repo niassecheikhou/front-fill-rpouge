@@ -14,19 +14,19 @@ export class CatalogueComponent implements OnInit {
 
   burgers!: IBurger[];
   menus!: IMenu[];
-
+  searchText:any
   constructor(private catalogueService: CatalogueService) { }
 
   ngOnInit(): void {
   
 
     this.catalogueService.getCatalogueObs().subscribe((data:ICatalogue)=>{
-      console.log(data);
+      // console.log(data);
       this.burgers = data.burgers;
       this.menus = data.menus;
 
-      console.log(this.burgers);
-      console.log(this.menus);
+      // console.log(this.burgers);
+      // console.log(this.menus);
     })
   }
 

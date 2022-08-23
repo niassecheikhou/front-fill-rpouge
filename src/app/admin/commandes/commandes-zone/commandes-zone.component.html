@@ -1,0 +1,31 @@
+
+    <table class="table">
+        <thead class="bg-dark">
+            <tr class="text-white">
+                <th class="text-center">N°</th>
+                <th class="text-center">Numero Commande</th>
+                <th class="text-center">Montant Commande</th>
+                <th class="text-center">Date Commande</th>
+                <th class="text-center">Actions</th>
+ 
+ 
+            </tr>
+        </thead>
+        <tbody class ="tbody">
+            <tr class="elements" *ngFor="let cmde of zone.commandes ;let i = index">
+                <td class="text-center">{{ i+1}}</td>
+                <td class="text-center">{{ cmde.numeroCommande}}</td>
+                <td class="text-center">{{ cmde.prixTotal}}</td>
+                <td class="text-center">{{ cmde.dateCommande | date :'h :mm'}}</td>
+                <td class="text-center">
+                    <input type="chexbox" class="btn btn-success" style="width:18px;">
+                </td>
+ 
+            </tr>
+            
+        </tbody>
+    </table>
+ 
+ 
+ 
+ 

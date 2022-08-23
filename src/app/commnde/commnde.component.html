@@ -1,0 +1,29 @@
+ <h1 class="text-center">LISTE DES COMMANDES  </h1>
+<table class="table">
+  <thead class="bg-dark " >
+  <tr class="text-white ">
+    <th scope class="text-center py-3">N°</th>
+        <th scope class="text-center">NUMERO COMMANDE</th>
+        <th scope class="text-center py-3">PRIX TOTAL</th>
+        <th scope class="text-center py-3">DATE COMMANDE</th>
+        <th scope class="text-center py-3">TELEPHONE CLIENT</th>
+        <th scope class="text-center py-3">ACTION</th>
+    </tr>
+    </thead>
+
+    <tbody class ="tbody">
+        <!---->
+    <tr class="elements" *ngFor="let i = index " >
+        <td  class="text-center">{{(i+1)}}</td>
+        <td  class="text-center">{{tabComm.numeroCommande}}</td>
+        <td  class="text-center">{{tabComm.prixTotal}}</td>
+        <td  class="text-center">{{tabComm.dateCommande | date}}</td>
+        <td  class="text-center">{{tabComm.client.teletdhone}}</td> 
+        <td  class="text-center">
+            <button type="button" class="btn btn-success mx-3">Edit</button>
+            <button type="button" class="btn btn-warning  mx-3">Details</button>
+        </td>
+    </tr>
+    
+    </tbody>
+    </table>

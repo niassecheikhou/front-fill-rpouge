@@ -16,7 +16,6 @@ export class MenuComponent implements OnInit {
   constructor(private sanitizer:DomSanitizer ,
     private menuService:MenuService,
     private router:Router,
-  
     private route: ActivatedRoute)  { }
 
   ngOnInit(): void {
@@ -24,7 +23,7 @@ export class MenuComponent implements OnInit {
     // let id = this.route.snapshot.paramMap.get('id');
      this.menuService.getAllMenus().subscribe(data=>{
       this.menu=data
-      // console.log(this.menu)
+      console.log(this.menu)
      })
   }
 
@@ -37,7 +36,5 @@ export class MenuComponent implements OnInit {
     // this.router.navigateByUrl(`detail_menu/${this.menuTab.id}`);
       
     // }
-
-  
 	
 }

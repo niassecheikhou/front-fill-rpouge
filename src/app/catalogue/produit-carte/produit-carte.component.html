@@ -1,22 +1,25 @@
+
 <div class="face-snap-card">
+    
 
     <h1>{{ produit.nomProduit}}</h1>
 
     <p class="image">
-        <img [src]=produit.image [alt]=produit.nomProduit>
+        <img src= "/assets/images/burger-king.jpg" [alt]=produit.nomProduit>
     </p>
     <p class="desc">{{ produit.description}}</p>
     <div class="voirs">
-        <p class="prix "> {{ produit.prix|currency:"XOF" }}</p>
+        <p class="prix "> {{ produit.prix | currency: "XOF" }}</p>
 
-        <button class="details" routerLink="panier" *ngIf="!isMenu(produit)">Ajouter Au panier</button>
+        <button class="details" (click)=" addToCart(produit)" *ngIf="!isMenu(produit)">Ajouter Au panier</button>
     </div>
     <div class="ajouter">
-        <button class="" routerLink="details_burger">VOIR DETAILS </button>
+        <button class="" [routerLink]="['/detail_menu/',produit.id]" >VOIR DETAILS </button>
     </div>
 </div>
 
 <!--
+    [routerLink]="['/user/bob']"
 <div class="border border-3">
 
     <img [src]="convertImgon(menu.image)" alt="">

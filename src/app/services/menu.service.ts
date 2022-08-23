@@ -11,7 +11,7 @@ export class MenuService {
   
   private readonly menu_url = "http://127.0.0.1:8000/api/menus";
   menuTab :IMenu[]=[]
-  
+  private readonly frite_url ="http://127.0.0.1:8000/api/frittes"
 
   constructor(private http: HttpClient,private sanitizer: DomSanitizer) { }
 
@@ -33,5 +33,10 @@ export class MenuService {
   getOneMenu(productId:any) {
     
     return this.convertiGetAllMenuEnTab().find(params => params.id === productId)
+  }
+
+  
+  getFrites():Observable<any>{
+    return this.http.get<any>(this.frite_url)
   }
 }
